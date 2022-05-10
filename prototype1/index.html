@@ -2,17 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <p>Print square value of pi in console</p>
-    <script>
-      (async () => {
-        let response = await fetch('target/wasm32-unknown-unknown/release/square.wasm');
-        let bytes = await response.arrayBuffer();
-        let { instance } = await WebAssembly.instantiate(bytes, { });
-        const PI = Math.PI;
-        console.log('The square value is: ', instance.exports.square(PI));
-      })();
-    </script>
+    <p>Print square value of Pi</p>
   </head>
   <body>
+    <p id="result"></p>
+    <script src="./src/app.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
  **Requirements**
 
 You can start the prototype directly with python
+
 Python2:
 > python -m SimpleHTTPServer
 

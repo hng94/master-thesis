@@ -1,5 +1,5 @@
 (async () => {
-    let response = await fetch('../wasm/square.wasm');
+    let response = await fetch('../lib/square.wasm');
     let bytes = await response.arrayBuffer();
     let { instance } = await WebAssembly.instantiate(bytes, {});
     const PI = Math.PI;
